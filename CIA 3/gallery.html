@@ -1,40 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        
-        body{
-            background-color: black;
-            color:whitesmoke;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-        }
-        
-        gallery{
-            size: 150px;
-            width: 100px;
-            height: 150px;
-            margin-left: auto;
-            align-items: center;
-        }
-    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GALLERY</title>
+    <title>Gallery - TechSpark Fest 2026</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #0d1117;
+            color: whitesmoke;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navigation Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 16px 30px;
+            background-color: #000000;
+            border-bottom: 1px solid #30363d;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #2a9d8f;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .menu a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .menu a:hover,
+        .menu a.active {
+            color: #2a9d8f;
+        }
+
+        /* Main Container */
+        .page-title {
+            text-align: center;
+            padding: 35px 20px 10px;
+        }
+
+        .page-title h1 {
+            color: #2a9d8f;
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+        }
+
+        .page-title p {
+            color: #8b949e;
+            font-size: 1rem;
+        }
+
+        /* Gallery Grid (Flexbox) */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 20px;
+            width: 280px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(42, 157, 143, 0.25);
+            border-color: #2a9d8f;
+        }
+
+        .card h2 {
+            font-size: 1.05rem;
+            color: #2a9d8f;
+            margin-bottom: 15px;
+            min-height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card img {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid #30363d;
+            transition: border-color 0.2s;
+        }
+
+        .card:hover img {
+            border-color: #2a9d8f;
+        }
+
+        .back-box {
+            text-align: center;
+            margin: 20px 0 40px;
+        }
+
+        .btn-home {
+            display: inline-block;
+            padding: 10px 22px;
+            background-color: #2a9d8f;
+            color: #000000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+            transition: background-color 0.2s;
+        }
+
+        .btn-home:hover {
+            background-color: #e0f4f1;
+        }
+
+        footer {
+            margin-top: auto;
+            background-color: #000000;
+            color: #8b949e;
+            text-align: center;
+            padding: 18px;
+            border-top: 1px solid #30363d;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
-    <div class="gallery">
-        <h2>MUSIC-NIGHT - ON THE 20TH DECEMBER</h2>
-        <img src="images/music.png" alt="Musical Events" height="150px" width="150px">
-    
-        <h2>CAMPFIRE-NIGHT - ON THE 21TH DECEMBER</h2>
-        <img src="images/campfire.png" alt="Campfire Night" height="150px" width="150px">
+    <header>
+        <div class="logo">TechSpark Fest 2026</div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="form.html">REGISTRATIONS</a></li>
+                <li><a href="gallery.html" class="active">GALLERY</a></li>
+                <li><a href="tables.html">EVENTS</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <h2>ANNUAL-BALL - ON THE 23TH DECEMBER</h2>
-        <img src="images/dance.png" alt="Annual Ball" height="150px" width="150px">
-
-        <h2>HACKATHON - ON THE 24TH DECEMBER</h2>
-        <img src="images/hack.png" alt="Hackathon" height="150px" width="150px">
-    
+    <div class="page-title">
+        <h1>Event Posters Gallery</h1>
+        <p>Explore the official event posters designed for TechSpark Fest 2026</p>
     </div>
+
+    <div class="gallery">
+        <div class="card">
+            <h2>MUSIC-NIGHT - ON THE 20TH DECEMBER</h2>
+            <img src="images/music.png" alt="Musical Events" width="220" height="220">
+        </div>
+
+        <div class="card">
+            <h2>CAMPFIRE-NIGHT - ON THE 21TH DECEMBER</h2>
+            <img src="images/campfire.png" alt="Campfire Night" width="220" height="220">
+        </div>
+
+        <div class="card">
+            <h2>ANNUAL-BALL - ON THE 23TH DECEMBER</h2>
+            <img src="images/dance.png" alt="Annual Ball" width="220" height="220">
+        </div>
+
+        <div class="card">
+            <h2>HACKATHON - ON THE 24TH DECEMBER</h2>
+            <img src="images/hack.png" alt="Hackathon" width="220" height="220">
+        </div>
+    </div>
+
+    <div class="back-box">
+        <a href="index.html" class="btn-home">&larr; Back to Home</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 TechSpark Fest. All rights reserved.</p>
+    </footer>
 </body>
 </html>

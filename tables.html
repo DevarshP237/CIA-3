@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Schedule - TechSpark Fest 2026</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #0d1117;
+            color: #ffffff;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navigation Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 16px 30px;
+            background-color: #000000;
+            border-bottom: 1px solid #30363d;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #2a9d8f;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .menu a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .menu a:hover,
+        .menu a.active {
+            color: #2a9d8f;
+        }
+
+        /* Page Content */
+        .container {
+            max-width: 900px;
+            width: 92%;
+            margin: 40px auto;
+            background-color: #161b22;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            border: 1px solid #30363d;
+        }
+
+        h1 {
+            color: #2a9d8f;
+            text-align: center;
+            margin-bottom: 8px;
+            font-size: 1.8rem;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #8b949e;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+        }
+
+        /* Table Styling (Part B-3) */
+        .table-wrapper {
+            overflow-x: auto;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        th, td {
+            padding: 15px 18px;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        th {
+            background-color: #2a9d8f;
+            color: #000000;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid #207a70;
+        }
+
+        td {
+            background-color: #21262d;
+            color: #e6edf3;
+            border-bottom: 1px solid #30363d;
+        }
+
+        tr:hover td {
+            background-color: #30363d;
+            transition: background-color 0.2s;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 9px 20px;
+            background-color: #2a9d8f;
+            color: #000000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+            transition: background-color 0.2s;
+        }
+
+        .back-link:hover {
+            background-color: #e0f4f1;
+        }
+
+        footer {
+            margin-top: auto;
+            background-color: #000000;
+            color: #8b949e;
+            text-align: center;
+            padding: 18px;
+            border-top: 1px solid #30363d;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">TechSpark Fest 2026</div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="form.html">REGISTRATIONS</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="tables.html" class="active">EVENTS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Event Schedule & Coordinators</h1>
+        <p class="subtitle">Complete timetable for TechSpark Fest 2026 events</p>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>TIME</th>
+                        <th>EVENTS</th>
+                        <th>HALL</th>
+                        <th>COORDINATOR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>10 AM</td>
+                        <td>MUSIC</td>
+                        <td>SEMINAR HALL</td>
+                        <td>DR GUNAVATI MA'AM</td>
+                    </tr>
+                    <tr>
+                        <td>8 PM</td>
+                        <td>CAMPFIRE NIGHT</td>
+                        <td>NRITYA STAGE</td>
+                        <td>PRAKASH SIR</td>
+                    </tr>
+                    <tr>
+                        <td>8 PM</td>
+                        <td>ANNUAL BALL</td>
+                        <td>ACTIVITY HUB</td>
+                        <td>ANITA MA'AM</td>
+                    </tr>
+                    <tr>
+                        <td>10 AM</td>
+                        <td>HACKATHON</td>
+                        <td>SEMINAR HALL</td>
+                        <td>DR GUNAVATI MA'AM</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="index.html" class="back-link">&larr; Back to Home</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 TechSpark Fest. All rights reserved.</p>
+    </footer>
+</body>
+</html>
