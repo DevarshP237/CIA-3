@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TechSpark Fest 2026</title>
+    <title>TechSpark 2026</title>
     <style>
       /* ===== BASE ===== */
       * {
@@ -12,35 +12,19 @@
         padding: 0;
       }
 
-      body {
-        font-family: "Trebuchet MS", Arial, sans-serif;
-        background-color: #0d1117;
-        color: #f0f6fc;
-        line-height: 1.6;
-      }
-
-      button {
-        cursor: pointer;
-        padding: 9px 18px;
-        border: none;
-        border-radius: 6px;
-        background-color: #2a9d8f;
-        color: #ffffff;
-        font-weight: 600;
-        font-size: 0.95rem;
-        transition: background-color 0.2s, color 0.2s, transform 0.1s;
-      }
-
-      button:hover {
-        color: #070707;
+      button:hover{
+        color:#070707;
         background-color: #e0f4f1;
-        transform: translateY(-1px);
       }
-
-      button a {
-        color: inherit;
-        text-decoration: none;
-        display: inline-block;
+      
+      @media {max-width:768px;
+    }
+      
+       body {
+        font-family: "Trebuchet MS", Arial, sans-serif;
+        background-color: #000000;
+        color: #000000;
+        line-height: 1.6;
       }
 
       /* ===== HEADER (Flexbox) ===== */
@@ -50,133 +34,63 @@
         align-items: center;
         flex-wrap: wrap;
         gap: 15px;
-        padding: 16px 30px;
+        padding: 14px 30px;
         background-color: #000000;
         color: white;
-        border-bottom: 1px solid #30363d;
       }
-
       .logo {
         font-size: 1.4rem;
         font-weight: bold;
-        color: #2a9d8f;
       }
-
       .menu {
         display: flex;
         gap: 22px;
         list-style: none;
       }
-
       .menu a {
         color: rgb(255, 255, 255);
         text-decoration: none;
-        font-weight: 600;
-        transition: color 0.2s;
       }
 
-      .menu a:hover {
-        color: #2a9d8f;
-      }
-
-      /* ===== BANNER ===== */
       .banner {
         text-align: center;
         padding: 55px 20px;
         background-color: #2a9d8f;
-        color: #000000;
+        color: rgb(0, 0, 0);
       }
-
       .banner h1 {
-        font-size: 2.4rem;
-        margin-bottom: 8px;
-      }
-
-      .banner p {
-        font-size: 1.05rem;
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .student-info {
-        margin-top: 12px;
-        display: inline-block;
-        background: rgba(0, 0, 0, 0.15);
-        padding: 6px 16px;
-        border-radius: 20px;
-        font-weight: 600;
+        font-size: 2.2rem;
+        margin-bottom: 6px;
       }
 
       /* ===== MAIN ===== */
       main {
         max-width: 1100px;
-        margin: 30px auto;
+        margin: 25px auto;
         padding: 0 20px;
       }
 
       main section,
       aside {
-        background-color: #ffffff;
-        color: #1f2937;
+        background-color: white;
         border-radius: 10px;
-        padding: 24px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        padding: 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
       }
-
       main section {
-        margin-bottom: 24px;
-      }
-
-      /* Gallery Preview Row (Flexbox) */
-      .gallery-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
-        margin-top: 18px;
-        justify-content: center;
-      }
-
-      .gallery-card {
-        text-align: center;
-        background: #f8fafc;
-        padding: 12px;
-        border-radius: 8px;
-        border: 1px solid #e2e8f0;
-        transition: transform 0.2s, box-shadow 0.2s;
-      }
-
-      .gallery-card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-      }
-
-      .gallery-card img {
-        width: 160px;
-        height: 160px;
-        object-fit: cover;
-        border-radius: 6px;
-        display: block;
-      }
-
-      .gallery-card p {
-        margin-top: 8px;
-        font-weight: 600;
-        font-size: 0.9rem;
-        color: #0b5563;
+        margin-bottom: 20px;
       }
 
       /* Tips section + aside side by side */
       .two-col {
         display: flex;
-        gap: 24px;
-        margin-bottom: 24px;
+        gap: 20px;
+        margin-bottom: 20px;
       }
-
       .two-col section {
         flex: 2;
         margin-bottom: 0;
       }
-
       .two-col aside {
         flex: 1;
         height: fit-content;
@@ -185,76 +99,35 @@
       h2,
       h3 {
         color: #0b5563;
-        margin-bottom: 12px;
-      }
-
-      .steps-list {
-        margin: 12px 0 18px 24px;
-      }
-
-      .steps-list li {
-        margin-bottom: 6px;
-      }
-
-      .events-list {
-        margin: 12px 0 18px 24px;
-      }
-
-      .events-list li {
-        margin-bottom: 6px;
+        margin-bottom: 10px;
       }
 
       .note {
         background-color: #e0f4f1;
         border-left: 4px solid #2a9d8f;
-        padding: 12px;
-        margin-top: 16px;
-        border-radius: 0 6px 6px 0;
-        transition: background-color 0.3s, border-left-color 0.3s;
-      }
-
-      .enquiry-buttons {
-        display: flex;
-        gap: 14px;
-        flex-wrap: wrap;
-        margin-top: 15px;
+        padding: 10px;
+        margin-top: 12px;
       }
 
       footer {
         background-color: #000000;
-        color: #8b949e;
+        color: white;
         text-align: center;
-        padding: 22px;
-        margin-top: 40px;
-        border-top: 1px solid #30363d;
+        padding: 18px;
       }
 
-      /* ===== RESPONSIVE MEDIA QUERY (Part B-5) ===== */
-      @media (max-width: 768px) {
-        header {
-          flex-direction: column;
-          text-align: center;
-        }
-
-        .menu {
-          flex-direction: column;
-          gap: 12px;
-        }
-
-        .two-col {
-          flex-direction: column;
-        }
-
-        .banner h1 {
-          font-size: 1.8rem;
-        }
-      }
+      /* ===== STUDENT WORK STARTS HERE ===== */
+      /* TODO (Part B-1): colour scheme, background and fonts for body, banner and sections   */
+      /* TODO (Part B-2): Flexbox for the gallery images (e.g. .gallery)                      */
+      /* TODO (Part B-3): style the table and the form (border, padding, margin, hover)       */
+      /* TODO (Part B-4): style links (hover), lists and the cursor                           */
+      /* TODO (Part B-5): media query so that the page works on mobile (max-width: 768px)     */
     </style>
   </head>
   <body>
     <!-- ===== HEADER ===== -->
     <header>
-      <div class="logo">TechSpark Fest 2026</div>
+      <b><div class="logo">TechSpark Fest 2026</div></b>
       <nav>
         <ul class="menu">
           <li><a href="form.html">REGISTRATIONS</a></li>
@@ -264,101 +137,75 @@
       </nav>
     </header>
 
-    <!-- ===== BANNER ===== -->
     <section class="banner" id="home">
       <h1>TechSpark Fest 2026</h1>
-      <p>This is one of the biggest events organised by our university, from the brainiest to the most talented. This is a place to showcase your skills.</p>
+      <p>This is one of the biggest events ogranised by our university, from the brainiest to the most talented.This is a place to showcase your skills.</p>
       <!-- TODO (Part A-1): Add your Name and Register Number inside this banner -->
-      <div class="student-info">
-        <span>Student: Peraka Devarsh | Register No: 26112010</span>
-      </div>
     </section>
 
     <!-- ===== MAIN (stacked sections) ===== -->
     <main>
-      <!-- Gallery Section -->
       <section id="gallery">
         <h2>Gallery</h2>
-        <p style="margin-bottom: 12px; color: #4b5563;">This gallery consists of all the beautifully made posters of our events created by our students.</p>
-        <a href="gallery.html"><button>View Full Gallery</button></a>
-
-        <!-- TODO (Part A-3 & Part B-2): Insert 4 images in a row using Flexbox -->
-        <div class="gallery-row">
-          <div class="gallery-card">
-            <img src="images/music.png" alt="Music Night Poster" width="160" height="160" />
-            <p>Music Night</p>
-          </div>
-          <div class="gallery-card">
-            <img src="images/campfire.png" alt="Campfire Night Poster" width="160" height="160" />
-            <p>Campfire Night</p>
-          </div>
-          <div class="gallery-card">
-            <img src="images/dance.png" alt="Annual Ball Poster" width="160" height="160" />
-            <p>Annual Ball</p>
-          </div>
-          <div class="gallery-card">
-            <img src="images/hack.png" alt="Hackathon Poster" width="160" height="160" />
-            <p>Hackathon</p>
-          </div>
-        </div>
+        <button><a href="gallery.html"></a></button>
+        <h3>This gallery cosnsist of all the beutifully made posters of our events made by the students</h3>
+        <!-- TODO (Part A-3): Insert 4 images from the images folder (use alt, width and height).
+           TODO (Part B-2): Arrange the images in a row using Flexbox. -->
       </section>
 
       <!-- Two sections side by side (Flexbox row) -->
       <div class="two-col">
         <section id="tips">
-          <h2>EVENT SCHEDULE & DETAILS</h2>
-          <h3>How to Register:</h3>
-          <ol class="steps-list">
-            <li>STEP 1: Click the registration link above or on the aside panel</li>
-            <li>STEP 2: Fill in your details (Name, Register Number, Event)</li>
-            <li>STEP 3: Once complete, recheck your submitted data</li>
-            <li>STEP 4: Submit at your convenience before deadline</li>
-          </ol>
-
-          <h3>Upcoming Events:</h3>
-          <ul class="events-list">
-            <li>Music Night - 20th December</li>
-            <li>Campfire Night - 21st December</li>
-            <li>Dance Night / Annual Ball - 23rd December</li>
-            <li>Hackathon - 24th December</li>
-          </ul>
-
-          <a href="tables.html"><button>View Event Details Table</button></a>
+          <h2>TABLES - EVENT DETAILS</h2>
+          <h3>This consists of all the event details</h3>
+          
+        <li>
+            <ol>
+              <li>STEP.1 Click the registration link above</li>
+              <li>STEP.2 Fill In your details</li>
+              <li>STEP.3 Once Complete recheck the data</li>
+              <li>STEP.4 Submit at your convinence</li>
+            </ol>
+          </li>
+        
+        <h3>Here is the list of the events</h3>
+          <li>
+            <ul>
+              <li>Music Night 20th December</li>
+              <li>Campfire Night 21th December</li>
+              <li>Dance Night 23th December</li>
+              <li>Hackathon 24th December</li>
+            </ul>
+          </li>
+        
+        
+        
+        </section>
+          <!-- TODO (Part A-2): Add an ORDERED list of 4 steps for "Packing for a trek"
+             and an UNORDERED list of 4 must-visit places. -->
         </section>
 
         <aside>
-          <h3>REGISTRATION</h3>
-          <p style="margin-bottom: 12px; color: #4b5563;">Ready to participate? Sign yourself up today!</p>
-          <a href="form.html"><button>Register Now</button></a>
-
-          <!-- Clickable image link (Part A-6) -->
-          <div style="margin-top: 18px; text-align: center;">
-            <a href="https://christuniversity.in" target="_blank" title="Christ University Website">
-              <img src="images/hack.png" alt="TechSpark Event Portal" style="width: 100%; max-height: 120px; object-fit: cover; border-radius: 6px;" />
-            </a>
-            <small style="display: block; margin-top: 4px; color: #6b7280;">Click poster to visit university site</small>
+          <h3>REGISTRATION FORMS</h3>
+          <p>Use this to sign yourself up!</p>
+          <button><a href="form.html">Registrations</a></button>
           </div>
-
-          <!-- Note box with JavaScript color change (Part C) -->
-          <div class="note" id="noteBox">
-            <p><strong>Note:</strong> Registrations close 24 hours prior to each event!</p>
-          </div>
-          <button type="button" onclick="changeNoteColor()" style="margin-top: 12px; font-size: 0.85rem; width: 100%;">
-            Change Note Color (JS)
-          </button>
+          <!-- TODO (Part A-6): Add two links here. One must open in a new tab,
+             and one must be an image link (clickable image). -->
+          <!-- TODO (Part C): Add a button that changes the colour of the note box
+             when clicked (use JavaScript and a variable). -->
         </aside>
       </div>
 
-      <!-- Enquiry Section -->
       <section id="enquiry">
+        
         <h2>Send an Enquiry</h2>
-        <h3 style="color: #4b5563; font-weight: normal; margin-bottom: 12px;">Contact the coordinators for more details:</h3>
-
-        <div class="enquiry-buttons">
-          <a href="https://mail.google.com/mail/u/0/" target="_blank"><button>Gmail</button></a>
-          <a href="https://www.linkedin.com/home?originalSubdomain=in" target="_blank"><button>LinkedIn</button></a>
-          <a href="https://www.instagram.com/" target="_blank"><button>Instagram</button></a>
-        </div>
+        <h3>Contact the following for more details</h3>
+        
+        <button><a href="https://mail.google.com/mail/u/0/"><h3>Gmail</h3></a></button>
+        <button><a href="https://www.linkedin.com/home?originalSubdomain=in"><h3>LinkedIN</h3></a></button>
+        <button><a href="https://www.instagram.com/"><h3>Instagram</h3></a></button>
+        <!-- TODO (Part A-5): Create a registration form (see question paper for fields). -->
       </section>
     </main>
 
@@ -366,22 +213,5 @@
     <footer>
       <p>&copy; 2026 TechSpark Fest. All rights reserved.</p>
     </footer>
-
-    <!-- JavaScript for Part C -->
-    <script>
-      let isAltColor = false;
-      function changeNoteColor() {
-        const note = document.getElementById("noteBox");
-        if (!isAltColor) {
-          note.style.backgroundColor = "#fef3c7";
-          note.style.borderLeftColor = "#f59e0b";
-          isAltColor = true;
-        } else {
-          note.style.backgroundColor = "#e0f4f1";
-          note.style.borderLeftColor = "#2a9d8f";
-          isAltColor = false;
-        }
-      }
-    </script>
   </body>
 </html>
